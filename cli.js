@@ -1,11 +1,9 @@
-//cli.js, ejecuta la herramienta desde comandos y ver como funcona
-const {mdLinks} = require('./index.js');
-mdLinks('docs/04-milestone.md')
-.then((response)=>{
+const { mdLinks } = require('./index.js');
 
-console.log(response)
-})
-.catch((error)=>{
-console.log(error)
-
-})
+mdLinks('docs/04-milestone.md', true)
+  .then((links) => {
+    console.log(links);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
